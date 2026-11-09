@@ -1,0 +1,18 @@
+{
+  "name": "@mono/cross-promo",
+  "private": true,
+  "type": "module",
+  "main": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./background": "./src/background.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -p ."
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.3.5",
+    "happy-dom": "^21.0.4",
+    "vitest": "^5.0.5"
+  }
+}

@@ -1,0 +1,4 @@
+/* Page-level only: components are styled by src/ui/theme.ts (injected on render). */
+html, body { margin: 0; }
+body { width: 380px; background: #ffffff; color-scheme: light dark; }
+@media (prefers-color-scheme: dark) { body { background: #0f172a; } }

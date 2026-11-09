@@ -1,0 +1,101 @@
+{
+  "manifest_version": 3,
+  "name": "Calmview: Ad Blocker for YouTube and the Web",
+  "short_name": "Calmview",
+  "version": "0.1.0",
+  "description": "Blocks ads, trackers and pop-ups on every site, YouTube included, so pages load faster. One switch per site. Private by design.",
+  "minimum_chrome_version": "120",
+  "permissions": [
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "scripting",
+    "storage",
+    "contextMenus",
+    "alarms"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Calmview",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ads",
+        "enabled": true,
+        "path": "rules/ads.json"
+      },
+      {
+        "id": "privacy",
+        "enabled": true,
+        "path": "rules/privacy.json"
+      },
+      {
+        "id": "malware",
+        "enabled": true,
+        "path": "rules/malware.json"
+      },
+      {
+        "id": "cookies",
+        "enabled": true,
+        "path": "rules/cookies.json"
+      },
+      {
+        "id": "annoyances",
+        "enabled": false,
+        "path": "rules/annoyances.json"
+      }
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "war/*",
+        "blocked.html"
+      ],
+      "matches": [
+        "<all_urls>"
+      ]
+    }
+  ],
+  "commands": {
+    "hide-element": {
+      "suggested_key": {
+        "default": "Alt+Shift+H"
+      },
+      "description": "Hide an element on this page"
+    }
+  }
+}

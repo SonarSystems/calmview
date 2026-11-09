@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Hush: a shield with a "hush" bar across it. Bold enough to read at 16px. -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4338CA"/>
+      <stop offset="1" stop-color="#0E7490"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="120" height="120" rx="30" fill="url(#bg)"/>
+  <path d="M64 22 L98 34 V62 C98 84 83 99 64 106 C45 99 30 84 30 62 V34 Z" fill="#ffffff"/>
+  <rect x="44" y="58" width="40" height="12" rx="6" fill="#4338CA"/>
+</svg>

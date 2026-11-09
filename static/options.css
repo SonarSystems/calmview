@@ -1,0 +1,33 @@
+/* Page layout for Settings. Colours and components come from src/ui/theme.ts (.ui tokens). */
+html { color-scheme: light dark; }
+body { margin: 0; background: #f1f5f9; }
+@media (prefers-color-scheme: dark) { body { background: #020617; } }
+.ui { font-size: 15px; }
+main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+header { display: flex; gap: 14px; align-items: center; margin-bottom: 20px; }
+header img { border-radius: 12px; }
+h1 { margin: 0; font-size: 26px; letter-spacing: -0.02em; }
+h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); margin: 0 0 6px; }
+.muted { color: var(--muted); margin: 0; }
+section { background: var(--bg); border: 1px solid var(--line); border-radius: 16px; padding: 18px 18px 12px; margin: 14px 0; }
+section > p { margin: 0 0 10px; color: var(--muted); font-size: 13.5px; }
+.trow .tx b { font-size: 14.5px; }
+.trow .tx span { font-size: 13px; }
+.trow.master .tx b { font-size: 16px; }
+.list { list-style: none; padding: 0; margin: 4px 0 8px; }
+.list li { display: flex; gap: 10px; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.list li:last-child { border-bottom: 0; }
+.list code, .mono { font: 12.5px/1.45 ui-monospace, Menlo, monospace; word-break: break-all; }
+textarea { box-sizing: border-box; width: 100%; min-height: 160px; font: 13px/1.5 ui-monospace, Menlo, monospace; color: var(--ink); background: var(--soft); border: 1px solid var(--line); border-radius: 10px; padding: 10px; resize: vertical; }
+textarea:focus-visible { outline: 2px solid var(--brand); outline-offset: 1px; }
+.btns { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; margin: 10px 0 6px; }
+.problems { list-style: none; margin: 6px 0; padding: 8px 12px; border-radius: 10px; background: var(--warn-bg); font-size: 13px; }
+.problems li { margin: 2px 0; }
+.nums { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; margin: 8px 0; }
+.num { background: var(--soft); border-radius: 12px; padding: 10px 12px; }
+.num b { display: block; font-size: 22px; font-variant-numeric: tabular-nums; letter-spacing: -0.02em; }
+.num span { font-size: 12.5px; color: var(--muted); }
+.empty { color: var(--muted); font-size: 13.5px; padding: 6px 0 10px; }
+#toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%) translateY(20px); background: #0f172a; color: #f8fafc; padding: 8px 16px; border-radius: 999px; opacity: 0; transition: all .2s; pointer-events: none; font: 600 14px system-ui, sans-serif; }
+#toast.show { opacity: 1; transform: translateX(-50%); }
+@media (prefers-color-scheme: dark) { #toast { background: #e2e8f0; color: #0f172a; } }

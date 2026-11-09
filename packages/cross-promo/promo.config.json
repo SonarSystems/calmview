@@ -1,0 +1,62 @@
+{
+  "maker": "Sonar Systems",
+  "_help": "One entry per extension (folder name under experiments/). Paste its Chrome Web Store URL once it's published, then run `pnpm --filter @mono/cross-promo refresh` and rebuild. Tags make suggestions relevant: extensions sharing a tag are shown first.",
+  "extensions": {
+    "2026-10-bargain-hunter": {
+      "storeUrl": "",
+      "tags": [
+        "shopping",
+        "money"
+      ]
+    },
+    "2026-10-fraudfence": {
+      "storeUrl": "",
+      "tags": [
+        "safety",
+        "money"
+      ]
+    },
+    "2026-10-hindsight": {
+      "storeUrl": "",
+      "tags": [
+        "money",
+        "reading"
+      ]
+    },
+    "2026-10-sussed": {
+      "storeUrl": "",
+      "tags": [
+        "shopping",
+        "safety"
+      ]
+    },
+    "2026-10-ticklist": {
+      "storeUrl": "",
+      "tags": [
+        "productivity"
+      ]
+    },
+    "2026-11-homing": {
+      "storeUrl": "",
+      "tags": [
+        "money",
+        "safety"
+      ]
+    },
+    "2026-11-hush": {
+      "storeUrl": "",
+      "tags": [
+        "safety",
+        "reading",
+        "video"
+      ]
+    },
+    "2026-11-job-autopilot": {
+      "storeUrl": "",
+      "tags": [
+        "productivity",
+        "career"
+      ]
+    }
+  }
+}

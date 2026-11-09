@@ -1,0 +1,9 @@
+{
+  "_about": "Measured 8 Nov 2026: headless Chromium, cache off, median of 5 runs alternating with and without Calmview (test/e2e/live.spec.ts, 'speed'). Load = the page's load event, in seconds. Data = bytes downloaded.",
+  "sites": [
+    { "site": "BBC News", "withoutS": 9.4, "withS": 6.0, "withoutMB": 2.0, "withMB": 1.9 },
+    { "site": "The Independent", "withoutS": 11.7, "withS": 7.8, "withoutMB": 3.1, "withMB": 2.0 },
+    { "site": "GitHub", "withoutS": 16.3, "withS": 11.3, "withoutMB": 0.9, "withMB": 0.5 },
+    { "site": "Daily Mirror", "withoutS": 15.3, "withS": 12.1, "withoutMB": 3.9, "withMB": 3.1 }
+  ]
+}
